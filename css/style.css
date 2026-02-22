@@ -78,33 +78,46 @@ ul {
 
 .heder-container {
     position: relative;
-    width: 380px;
-    height: 420px;
+    width: 320px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .heder-photo {
-    position: absolute;
-    top: 48%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 230px;
-    height: 280px;
+    width: 280px;
+    height: 320px;
     object-fit: cover;
     object-position: center top;
-    clip-path: polygon(50% 2%, 93% 25%, 93% 75%, 50% 98%, 7% 75%, 7% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    box-shadow: 0 10px 30px rgba(107, 142, 90, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.heder-photo::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    background: linear-gradient(135deg, var(--gold), var(--sage-green));
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: -1;
+}
+
+.heder-leaf {
+    width: 120px;
+    filter: hue-rotate(25deg) saturate(0.8);
     z-index: 1;
 }
 
-.heder-frame {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    z-index: 2;
-    pointer-events: none;
+.heder-leaf-top {
+    margin-bottom: -30px;
+}
+
+.heder-leaf-bottom {
+    margin-top: -30px;
+    transform: rotate(180deg);
 }
 
 /* Timer section */
