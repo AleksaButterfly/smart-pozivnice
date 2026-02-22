@@ -85,38 +85,36 @@ ul {
     align-items: center;
 }
 
+.heder-photo-wrapper {
+    position: relative;
+    padding: 6px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold));
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    box-shadow: 0 10px 30px rgba(107, 142, 90, 0.3);
+}
+
 .heder-photo {
-    width: 280px;
-    height: 320px;
+    width: 260px;
+    height: 300px;
     object-fit: cover;
     object-position: center top;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    box-shadow: 0 10px 30px rgba(107, 142, 90, 0.3);
-    position: relative;
-    z-index: 2;
-}
-
-.heder-photo::before {
-    content: '';
-    position: absolute;
-    inset: -4px;
-    background: linear-gradient(135deg, var(--gold), var(--sage-green));
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    z-index: -1;
+    display: block;
 }
 
 .heder-leaf {
-    width: 120px;
+    width: 130px;
     filter: hue-rotate(25deg) saturate(0.8);
-    z-index: 1;
+    position: relative;
+    z-index: 10;
 }
 
 .heder-leaf-top {
-    margin-bottom: -30px;
+    margin-bottom: -40px;
 }
 
 .heder-leaf-bottom {
-    margin-top: -30px;
+    margin-top: -40px;
     transform: rotate(180deg);
 }
 
