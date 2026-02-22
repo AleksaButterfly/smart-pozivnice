@@ -76,46 +76,11 @@ ul {
     text-align: left;
 }
 
-.heder-container {
-    position: relative;
+#heder {
     width: 320px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.heder-photo-wrapper {
-    position: relative;
-    padding: 6px;
-    background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold));
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    box-shadow: 0 10px 30px rgba(107, 142, 90, 0.3);
-}
-
-.heder-photo {
-    width: 260px;
-    height: 300px;
-    object-fit: cover;
-    object-position: center top;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    height: auto;
     display: block;
-}
-
-.heder-leaf {
-    width: 130px;
-    filter: hue-rotate(25deg) saturate(0.8);
-    position: relative;
-    z-index: 10;
-}
-
-.heder-leaf-top {
-    margin-bottom: -40px;
-}
-
-.heder-leaf-bottom {
-    margin-top: -40px;
-    transform: rotate(180deg);
+    margin: 20px auto 0;
 }
 
 /* Timer section */
