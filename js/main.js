@@ -66,7 +66,7 @@ var x = setInterval(function() {
 }, 1000);
 
 // Датум за потврду доласка - 20 дана пре венчања
-var confirmDate = new Date("Apr 19, 2026 23:59:59").getTime();
+var confirmDate = new Date("Apr 20, 2026 23:59:59").getTime();
 
 var y = setInterval(function() {
     var sad = new Date().getTime();
