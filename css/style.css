@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+    --sage-green: #8FA67A;
+    --sage-dark: #6B8E5A;
+    --sage-light: #C5D4BC;
+    --gold: #C9A227;
+    --gold-light: #E8D5A3;
+    --cream: #FDFBF7;
+    --text-dark: #3D4A3A;
+    --text-light: #5C6B58;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background: linear-gradient(135deg, var(--cream) 0%, #F5F3EE 50%, var(--sage-light) 100%);
+    background-attachment: fixed;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Top decoration */
+.gornjiPatern {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    opacity: 0.85;
+    filter: hue-rotate(25deg) saturate(0.7);
+}
+
+/* First section - Save the Date */
+#prviDeo {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding-top: 300px;
+}
+
+#save {
+    width: 280px;
+    filter: hue-rotate(25deg) saturate(0.8);
+}
+
+#datum {
+    text-align: center;
+    display: flex;
+    margin: 50px auto;
+    width: fit-content;
+}
+
+#datum p {
+    font-family: "Playfair Display", serif;
+    color: var(--sage-dark);
+    font-weight: 600;
+}
+
+#danDatum {
+    font-size: 90px;
+}
+
+#godinaDatum {
+    font-size: 30px;
+    margin-top: 12px;
+    text-align: left;
+}
+
+#heder {
+    width: 50%;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(107, 142, 90, 0.2);
+}
+
+/* Timer section */
+#tajmer {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+#tajmer h1, #galerija h1 {
+    font-size: 42px;
+    margin: 0 auto;
+    font-weight: 400;
+    margin-bottom: 70px;
+    width: 500px;
+    font-family: "Playfair Display", serif;
+    color: var(--sage-dark);
+    letter-spacing: 1px;
+}
+
+.tajmerDiv {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    font-size: 60px;
+    font-family: "Playfair Display", serif;
+    color: var(--text-dark);
+}
+
+.box {
+    width: 100%;
+}
+
+.transparenti {
+    font-size: 26px;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    margin-bottom: 100px;
+    color: var(--text-light);
+    letter-spacing: 2px;
+}
+
+.transparenti .box {
+    border: none;
+}
+
+.sat .box {
+    border-bottom: 3px solid;
+    border-image: linear-gradient(to right, var(--sage-light), var(--sage-dark), var(--gold));
+    border-image-slice: 1;
+    margin: 20px;
+}
+
+/* Second section - Names */
+#drugiDeo {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.separatorCvet {
+    width: 200px;
+    filter: hue-rotate(25deg) saturate(0.8);
+    opacity: 0.9;
+}
+
+#drugiDeo h1 {
+    font-size: 52px;
+    margin: 0 auto;
+    font-weight: 400;
+    margin-bottom: 70px;
+    width: 500px;
+    font-family: "Playfair Display", serif;
+    margin-top: 100px;
+    color: var(--sage-dark);
+    letter-spacing: 2px;
+}
+
+/* Story section */
+#prica {
+    width: 60%;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+
+#prica.bez-slike {
+    justify-content: center;
+    max-width: 700px;
+}
+
+#prica.bez-slike #pricaTekst {
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 50px 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(107, 142, 90, 0.15);
+    border: 1px solid rgba(143, 166, 122, 0.2);
+}
+
+#prica.bez-slike #pricaTekst h2 {
+    border-bottom: none;
+    margin-bottom: 30px;
+    display: inline-block;
+    position: relative;
+}
+
+#prica.bez-slike #pricaTekst h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, var(--sage-light), var(--sage-dark), var(--gold));
+}
+
+#pricaTekst {
+    width: 45%;
+    text-align: left;
+    font-family: "Lato", sans-serif;
+    line-height: 1.8;
+}
+
+#prica img {
+    width: 40%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(107, 142, 90, 0.25);
+}
+
+#pricaTekst h2 {
+    border-bottom: 3px solid var(--sage-green);
+    margin: 0 0 20px 0;
+    font-size: 36px;
+    font-weight: 400;
+    font-family: "Playfair Display", serif;
+    color: var(--sage-dark);
+    padding-bottom: 10px;
+}
+
+#pricaTekst p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: var(--text-light);
+}
+
+/* Timeline section */
+#vremeDatum {
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.elementVreme {
+    margin: 120px auto;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 99;
+    font-family: "Lato", sans-serif;
+    color: var(--text-dark);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    max-width: 400px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(107, 142, 90, 0.15);
+    border: 1px solid rgba(143, 166, 122, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.elementVreme:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(107, 142, 90, 0.25);
+}
+
+.elementVreme h1:first-of-type {
+    font-family: "Playfair Display", serif;
+}
+
+.elementVreme p {
+    margin: 8px;
+    font-size: 18px;
+    color: var(--text-light);
+}
+
+.elementVreme h1 {
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--sage-dark);
+    margin-bottom: 15px;
+    font-family: "Playfair Display", serif;
+}
+
+.elementVreme img {
+    width: 80px;
+    margin-bottom: 20px;
+    filter: hue-rotate(25deg) saturate(0.8);
+}
+
+.elementVreme a {
+    color: var(--gold);
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.elementVreme a:hover {
+    color: var(--sage-dark);
+    border-bottom: 1px solid var(--sage-dark);
+}
+
+.sati {
+    color: var(--gold) !important;
+    font-size: 42px !important;
+    font-weight: 500;
+    font-family: "Playfair Display", serif !important;
+    margin-top: 15px !important;
+}
+
+/* Decorative elements */
+.levoUkras {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    opacity: 0.7;
+    filter: hue-rotate(25deg) saturate(0.7);
+}
+
+.levoUkrasGore {
+    top: -160px;
+}
+
+.desnoUkras {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    opacity: 0.7;
+    filter: hue-rotate(25deg) saturate(0.7);
+}
+
+/* RSVP Form */
+#potvrda {
+    width: 55%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    border: 2px solid var(--sage-green);
+    border-radius: 25px;
+    margin: 80px auto;
+    position: relative;
+    z-index: 99;
+    padding: 20px 0 50px 0;
+    box-shadow: 0 15px 50px rgba(107, 142, 90, 0.2);
+}
+
+#potvrda h1 {
+    text-align: center;
+}
+
+form {
+    width: 70%;
+    margin: auto;
+}
+
+form input, textarea, select {
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px 15px;
+    background-color: #fff;
+    border: 2px solid var(--sage-light);
+    border-radius: 10px;
+    color: var(--text-dark);
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--sage-green);
+    box-shadow: 0 0 0 3px rgba(143, 166, 122, 0.2);
+}
+
+form ul li {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#potvrda .tekstPisan {
+    margin-bottom: 30px;
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    color: var(--sage-dark);
+    font-weight: 400;
+}
+
+.dugme {
+    padding: 15px 40px;
+    background: linear-gradient(135deg, var(--sage-green), var(--sage-dark));
+    border: none;
+    border-radius: 30px;
+    font-family: "Lato", sans-serif;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(107, 142, 90, 0.3);
+}
+
+.dugme:hover {
+    background: linear-gradient(135deg, var(--sage-dark), var(--gold));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(107, 142, 90, 0.4);
+}
+
+.radioRed {
+    display: block;
+}
+
+form span {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-light);
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-right: 8px;
+    accent-color: var(--sage-green);
+}
+
+.greska {
+    font-size: 13px;
+    color: #c0392b;
+}
+
+.maliSpan {
+    margin-top: 5px;
+    font-size: 12px !important;
+    color: var(--text-light) !important;
+}
+
+#potvrdaTekst {
+    margin: 50px auto 15px auto;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    width: 350px;
+    color: var(--sage-dark);
+    font-size: 24px;
+    font-style: italic;
+}
+
+#potvrdaTimer {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 80px;
+    color: var(--text-light);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    margin-top: 100px;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 99;
+}
+
+footer p {
+    font-family: "Playfair Display", serif;
+    color: var(--gold);
+    font-size: 28px;
+    font-style: italic;
+}
+
+/* Bottom corner decoration */
+#donjiUgao {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#donjiUgao img {
+    position: absolute;
+    bottom: 0;
+    filter: hue-rotate(25deg) saturate(0.7);
+    opacity: 0.85;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .levoUkras {
+        width: 250px;
+        top: 600px;
+    }
+    .desnoUkras {
+        width: 300px;
+    }
+    #heder {
+        width: 60%;
+    }
+    #prica {
+        width: 80%;
+    }
+    #tajmer h1, #galerija h1, #drugiDeo h1 {
+        width: 90%;
+    }
+}
+
+@media (max-width: 700px) {
+    #prviDeo {
+        padding-top: 200px;
+    }
+    #save {
+        width: 240px;
+    }
+    #heder {
+        width: 75%;
+    }
+    .tajmerDiv {
+        width: 95%;
+        font-size: 40px;
+    }
+    .transparenti {
+        font-size: 20px;
+    }
+    #tajmer h1, #galerija h1 {
+        font-size: 32px;
+    }
+    #danDatum {
+        font-size: 70px;
+    }
+    #godinaDatum {
+        font-size: 24px;
+        margin-top: 8px;
+    }
+    #prica {
+        display: block;
+        width: 90%;
+    }
+    #pricaTekst {
+        width: 90%;
+        margin: 40px auto;
+    }
+    #prica img {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+    #prica.bez-slike #pricaTekst {
+        padding: 40px 30px;
+    }
+    .elementVreme {
+        width: 85%;
+        padding: 30px 20px;
+    }
+    .elementVreme h1 {
+        font-size: 26px;
+    }
+    .elementVreme img {
+        width: 70px;
+    }
+    .desnoUkras {
+        width: 180px;
+    }
+    .levoUkras {
+        width: 200px;
+    }
+    #potvrda {
+        width: 90%;
+        border-radius: 20px;
+    }
+    form {
+        width: 85%;
+    }
+    .separatorCvet {
+        width: 150px;
+    }
+    .sati {
+        font-size: 36px !important;
+    }
+    #drugiDeo h1 {
+        font-size: 38px;
+        width: 90%;
+    }
+    #pricaTekst h2 {
+        font-size: 28px;
+    }
+    #potvrdaTekst {
+        width: 90%;
+        font-size: 20px;
+    }
+    #potvrda .tekstPisan {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    #prviDeo {
+        padding-top: 150px;
+    }
+    #save {
+        width: 200px;
+    }
+    #heder {
+        width: 90%;
+    }
+    .tajmerDiv {
+        font-size: 32px;
+    }
+    .transparenti {
+        font-size: 16px;
+    }
+    .sat .box {
+        margin: 10px;
+    }
+    #tajmer h1, #galerija h1, #drugiDeo h1 {
+        font-size: 26px;
+    }
+    #danDatum {
+        font-size: 55px;
+    }
+    #godinaDatum {
+        font-size: 20px;
+    }
+}
