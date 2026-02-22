@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nСватбена позивница - Александар и Марија\n\n- Sage green & gold color scheme with modern elegant fonts\n- Countdown timer for May 9, 2026 wedding\n- Timeline with 4 events and Google Maps links\n- RSVP form ready for future Excel integration\n- Fully translated to Serbian Cyrillic\n- Responsive design for mobile devices\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate Google Maps links with correct locations\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(gh repo view:*)",
+      "Bash(gh api:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate per friend''s feedback\n\n- Reorder: Svečana proslava \\(16:00\\) now before Građansko venčanje \\(17:45\\)\n- Change fonts back to Old Standard TT + Caveat \\(original style\\)\n- Update message field: \"Порука или песма коју бисте желели да чујете на нашој прослави\"\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+    ]
+  }
+}
