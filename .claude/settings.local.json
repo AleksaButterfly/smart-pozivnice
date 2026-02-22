@@ -11,7 +11,8 @@
       "Bash(gh repo view:*)",
       "Bash(gh api:*)",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate per friend''s feedback\n\n- Reorder: Svečana proslava \\(16:00\\) now before Građansko venčanje \\(17:45\\)\n- Change fonts back to Old Standard TT + Caveat \\(original style\\)\n- Update message field: \"Порука или песма коју бисте желели да чујете на нашој прослави\"\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd couple photo to header section\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd couple photo to header section\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd circular frame to header photo\n\n- Round border with sage green + gold outline\n- Matches original design style\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
     ]
   }
 }
