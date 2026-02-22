@@ -77,14 +77,12 @@ ul {
 }
 
 #heder {
-    width: 50%;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
-    box-shadow: 0 15px 40px rgba(107, 142, 90, 0.3);
-    border: 8px solid var(--sage-light);
-    outline: 3px solid var(--gold);
-    outline-offset: 5px;
+    box-shadow: 0 10px 30px rgba(107, 142, 90, 0.25), 0 0 0 4px var(--gold), 0 0 0 8px var(--sage-light);
     object-fit: cover;
-    aspect-ratio: 1/1;
+    object-position: center top;
 }
 
 /* Timer section */
