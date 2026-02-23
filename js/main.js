@@ -82,3 +82,93 @@ var y = setInterval(function() {
         document.getElementById("potvrdaTimer").innerHTML = "Време за потврду је истекло.";
     }
 }, 1000);
+
+// =============================================
+// ФОРМА - Слање података у Google Sheets
+// =============================================
+
+// ВАЖНО: Замените ово са вашим Google Apps Script URL-ом
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbznn6_wL6N1NBYJbrlS40_xPfYgXs9Nu9FCqGb2W2JZGi15cCSBU1ZpU7gL5-LKqAta/exec";
+
+document.getElementById("sendMessage").addEventListener("click", function(e) {
+    e.preventDefault();
+
+    // Узми вредности из форме
+    const ime = document.querySelector('input[name="ime"]').value.trim();
+    const dolazakRadio = document.querySelector('input[name="dolazak"]:checked');
+    const brojGostiju = document.querySelector('select[name="brojGostiju"]').value;
+    const imenaGostiju = document.querySelector('textarea[name="imenaGostiju"]').value.trim();
+    const poruka = document.querySelector('textarea[name="poruka"]').value.trim();
+
+    // Валидација
+    let hasError = false;
+
+    // Ресетуј грешке
+    document.querySelectorAll('.greska').forEach(el => el.textContent = '');
+
+    if (!ime) {
+        document.querySelector('.greska').textContent = 'Молимо унесите име и презиме.';
+        hasError = true;
+    }
+
+    if (!dolazakRadio) {
+        hasError = true;
+    }
+
+    if (hasError) {
+        return;
+    }
+
+    const dolazak = dolazakRadio.value;
+
+    // Припреми податке
+    const data = {
+        ime: ime,
+        dolazak: dolazak === "da" ? "Да" : "Не",
+        brojGostiju: brojGostiju,
+        imenaGostiju: imenaGostiju,
+        poruka: poruka
+    };
+
+    // Промени текст дугмета
+    const btn = document.getElementById("sendMessage");
+    const originalText = btn.textContent;
+    btn.textContent = "Шаљем...";
+    btn.disabled = true;
+
+    // Пошаљи податке
+    fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+    .then(() => {
+        // Успешно послато
+        btn.textContent = "Послато ✓";
+        btn.style.backgroundColor = "#4CAF50";
+
+        // Ресетуј форму
+        document.getElementById("form").reset();
+
+        // Врати дугме после 3 секунде
+        setTimeout(() => {
+            btn.textContent = originalText;
+            btn.disabled = false;
+            btn.style.backgroundColor = "";
+        }, 3000);
+    })
+    .catch((error) => {
+        console.error("Грешка:", error);
+        btn.textContent = "Грешка - покушајте поново";
+        btn.style.backgroundColor = "#f44336";
+        btn.disabled = false;
+
+        setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.backgroundColor = "";
+        }, 3000);
+    });
+});
