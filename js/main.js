@@ -95,9 +95,9 @@ document.getElementById("sendMessage").addEventListener("click", function(e) {
 
     // Узми вредности из форме
     const ime = document.querySelector('input[name="ime"]').value.trim();
-    const dolazakRadio = document.querySelector('input[name="dolazak"]:checked');
-    const brojGostiju = document.querySelector('select[name="brojGostiju"]').value;
-    const imenaGostiju = document.querySelector('textarea[name="imenaGostiju"]').value.trim();
+    const dolazakRadio = document.querySelector('input[name="potvrda"]:checked');
+    const brojGostiju = document.querySelector('select[name="broj"]').value;
+    const imenaGostiju = document.querySelector('textarea[name="gosti"]').value.trim();
     const poruka = document.querySelector('textarea[name="poruka"]').value.trim();
 
     // Валидација
@@ -124,7 +124,7 @@ document.getElementById("sendMessage").addEventListener("click", function(e) {
     // Припреми податке
     const data = {
         ime: ime,
-        dolazak: dolazak === "da" ? "Да" : "Не",
+        dolazak: dolazak === "1" ? "Да" : "Не",
         brojGostiju: brojGostiju,
         imenaGostiju: imenaGostiju,
         poruka: poruka
